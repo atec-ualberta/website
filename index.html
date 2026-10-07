@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ATEC | Assistive Technology Engineering Club</title>
+  <meta name="description" content="A group of University of Alberta students creating customized 3D printed assistive technology for anyone in need.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="ATEC home">
+        <img src="images/logo.png" alt="ATEC" width="749" height="183">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+        <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="page">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <h1 class="hero-title" id="hero-title">User-Centered<br>Design-Focused</h1>
+        <img class="hero-logo" src="images/logo-full.png" alt="ATEC: Assistive Technology Engineering Club" width="749" height="230">
+      </div>
+    </section>
+
+    <section class="section" aria-label="What is assistive technology">
+      <div class="container">
+        <div class="panel center">
+          <p class="lead">We are a group of students at the University of Alberta dedicated to creating customized 3D printed assistive technology for anyone in need.</p>
+          <p class="lead">Learn more about Assistive Technology below!</p>
+
+          <div class="accordion">
+            <div class="accordion-item">
+              <h2 class="accordion-heading">
+                <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-1">
+                  What does assistive technology do?
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 9l7 7 7-7"/></svg>
+                </button>
+              </h2>
+              <div class="accordion-panel" id="faq-1" hidden>
+                <p>Assistive technologies encompass any tool, device, or software designed to help individuals navigate their day-to-day lives with greater independence. These solutions span a wide range of complexity, from a simple custom cup holder that prevents spills to a fully motorized wheelchair. Ultimately, assistive technology is measured not by its level of innovation, but by the level of independence and service it delivers to the user.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-heading">
+                <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-2">
+                  Why are assistive technologies important?
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 9l7 7 7-7"/></svg>
+                </button>
+              </h2>
+              <div class="accordion-panel" id="faq-2" hidden>
+                <p>If you have ever used a bottle opener or phone stand, you have experienced the subtle yet profound impact of assistive technology. For individuals with mobility or accessibility needs, these tools transform everyday hurdles, like putting on shoes or using a keyboard, into manageable tasks. Reliable assistive technology matters because when access to these customized tools is blocked by cost or complexity, it directly limits an individual's fundamental right to independence.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-heading">
+                <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-3">
+                  Where does ATEC fit into the assistive technology "field"?
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 9l7 7 7-7"/></svg>
+                </button>
+              </h2>
+              <div class="accordion-panel" id="faq-3" hidden>
+                <p>While the commercial assistive technology market often suffers from high costs and generic mass production, ATEC operates at the grassroots level to deliver custom, 3D-printed devices tailored to individual needs. Our low-cost model directly dismantles traditional barriers to accessibility, providing personalized tools that would otherwise be unavailable or unmodifiable on the open market. In doing so, ATEC serves as both a practical service provider and an educational movement, empowering the next generation of students to advance assistive design.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 class="section-title center" id="projects-title">View Our Projects</h2>
+        <div class="carousel" aria-roledescription="carousel" aria-label="Featured projects">
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <article class="project-slide">
+                  <div>
+                    <p class="eyebrow">Project</p>
+                    <h3>Keyguard</h3>
+                    <p class="sub">University of Alberta Accessibility + Accommodations</p>
+                    <a class="btn" href="projects.html#keyguard">View More Projects</a>
+                  </div>
+                  <img src="images/keyguard.png" alt="A yellow 3D-printed keyguard fitted over a full-size black keyboard" width="577" height="212">
+                </article>
+              </div>
+              <div class="carousel-slide">
+                <article class="project-slide">
+                  <div>
+                    <p class="eyebrow">Project</p>
+                    <h3>Tactile Maps</h3>
+                    <p class="sub">Adaptabilities</p>
+                    <a class="btn" href="projects.html#tactile-maps">View More Projects</a>
+                  </div>
+                  <img src="images/tactile-map-1.webp" alt="A blue and yellow 3D-printed tactile floor map with raised walls and Braille labels" width="900" height="1200" loading="lazy">
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="services-title">
+      <div class="container">
+        <div class="split split--center">
+          <div>
+            <h2 class="section-title" id="services-title">How to access our services</h2>
+            <p class="lead">ATEC is open to assisting anyone who may need help with designing a custom assistive technology to fit your personal needs!</p>
+            <p>After taking on your request, we work closely with you, the user of the assistive technology, to ensure that it not only meets your expectations but is something you want to use.</p>
+          </div>
+          <div class="card center">
+            <p class="lead">Fill out our project intake form to begin working with ATEC!</p>
+            <div class="btn-row btn-row--center">
+              <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfFhZEaENV64fX4PRsF5rQLDq-MLgU04c92JLlNGpVl4EjU7g/viewform?usp=sharing&amp;ouid=114358462147039783282" target="_blank" rel="noopener">Intake Form<span class="visually-hidden"> (opens in new tab)</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="What to expect">
+      <div class="container">
+        <div class="split">
+          <article class="card">
+            <h2>What to expect as a potential user</h2>
+            <p>Potential assistive technology users can expect to be heavily involved with the design of their assistive technology. ATEC will make sure that your feedback is taken into account during every step of the project.</p>
+            <p>Whether looking to modify an existing assistive technology, or starting from the ground up, ATEC members will work closely with you to deliver you the device you want and need!</p>
+            <p>To get started on the project process, fill out our project intake form or contact us if you have additional questions.</p>
+            <div class="btn-row">
+              <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfFhZEaENV64fX4PRsF5rQLDq-MLgU04c92JLlNGpVl4EjU7g/viewform?usp=sharing&amp;ouid=114358462147039783282" target="_blank" rel="noopener">Project Intake Form<span class="visually-hidden"> (opens in new tab)</span></a>
+              <a class="btn btn--outline" href="contact.html">Contact Us</a>
+            </div>
+          </article>
+          <article class="card">
+            <h2>What to expect as a potential member</h2>
+            <p>Members at ATEC can expect to work on projects where you can apply various skills with a focus on helping make other people's lives easier.</p>
+            <p>Whether you are interested in engineering design, research, or administrative work, ATEC could use your expertise!</p>
+            <p>Learn more about the different roles in ATEC below:</p>
+            <div class="btn-row">
+              <a class="btn" href="team.html">ATEC Team Roles</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <img class="wave wave--bottom-left" src="images/wave-teal.svg" alt="">
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a class="footer-logo" href="index.html" aria-label="ATEC home">
+        <img src="images/logo-full.png" alt="ATEC: Assistive Technology Engineering Club" width="749" height="230" loading="lazy">
+      </a>
+      <div class="footer-contact">
+        <p>Email: <a href="mailto:atec.yeg@gmail.com">atec.yeg@gmail.com</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/atec.ualberta/" target="_blank" rel="noopener">@atec.ualberta</a></p>
+      </div>
+      <p class="footer-copy">&copy; 2026 Assistive Technology Engineering Club.</p>
+    </div>
+  </footer>
+</body>
+</html>
