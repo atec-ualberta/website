@@ -1,53 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ATEC | Assistive Technology Engineering Club</title>
-  <meta name="description" content="A group of University of Alberta students creating customized 3D printed assistive technology for anyone in need.">
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/main.js" defer></script>
+  {{> head title="ATEC | Assistive Technology Engineering Club" description="A group of University of Alberta students creating customized 3D printed assistive technology for anyone in need."}}
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="index.html" aria-label="ATEC home">
-        <img src="images/logo.png" alt="ATEC" width="749" height="183">
-      </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
-        <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
-      </button>
-      <nav class="nav" id="site-nav" aria-label="Main">
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="resources.html">Resources</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  {{> header current="index"}}
 
   <main id="main" class="page">
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero">
       <div class="hero-inner">
-        <h1 class="hero-title" id="hero-title">User-Centered<br>Design-Focused</h1>
-        <img class="hero-logo" src="images/logo-full.png" alt="ATEC: Assistive Technology Engineering Club" width="749" height="230">
+        <h1 class="hero-logo"><img src="images/logo-full.png" alt="ATEC: Assistive Technology Engineering Club" width="749" height="230"></h1>
+        <p class="hero-title">User-Centered<br>Design-Focused</p>
       </div>
     </section>
 
     <section class="section" aria-label="What is assistive technology">
       <div class="container">
-        <div class="panel center">
-          <p class="lead">We are a group of students at the University of Alberta dedicated to creating customized 3D printed assistive technology for anyone in need.</p>
+        <div class="panel">
+          <p class="lead">We are the Assistive Technology Engineering Club (ATEC), a group of students at the University of Alberta dedicated to creating customized 3D printed assistive technology for anyone in need.</p>
           <p class="lead">Learn more about Assistive Technology below!</p>
 
           <div class="accordion">
@@ -76,7 +48,7 @@
             <div class="accordion-item">
               <h2 class="accordion-heading">
                 <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-3">
-                  Where does ATEC fit into the assistive technology "field"?
+                  Where does ATEC fit into the assistive technology field?
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 9l7 7 7-7"/></svg>
                 </button>
               </h2>
@@ -91,34 +63,29 @@
 
     <section class="section" aria-labelledby="projects-title">
       <div class="container">
-        <h2 class="section-title center" id="projects-title">View Our Projects</h2>
-        <div class="carousel" aria-roledescription="carousel" aria-label="Featured projects">
-          <div class="carousel-viewport">
-            <div class="carousel-track">
-              <div class="carousel-slide">
-                <article class="project-slide">
-                  <div>
-                    <p class="eyebrow">Project</p>
-                    <h3>Keyguard</h3>
-                    <p class="sub">University of Alberta Accessibility + Accommodations</p>
-                    <a class="btn" href="projects.html#keyguard">View More Projects</a>
-                  </div>
-                  <img src="images/keyguard.png" alt="A yellow 3D-printed keyguard fitted over a full-size black keyboard" width="577" height="212">
-                </article>
-              </div>
-              <div class="carousel-slide">
-                <article class="project-slide">
-                  <div>
-                    <p class="eyebrow">Project</p>
-                    <h3>Tactile Maps</h3>
-                    <p class="sub">Adaptabilities</p>
-                    <a class="btn" href="projects.html#tactile-maps">View More Projects</a>
-                  </div>
-                  <img src="images/tactile-map-1.webp" alt="A blue and yellow 3D-printed tactile floor map with raised walls and Braille labels" width="900" height="1200" loading="lazy">
-                </article>
-              </div>
+        <h2 class="section-title" id="projects-title">View Our Projects</h2>
+        <div class="project-list">
+          <article class="project-slide">
+            <div>
+              <p class="eyebrow">Project</p>
+              <h3>Keyguard</h3>
+              <p class="sub">University of Alberta Accessibility and Accommodations</p>
+              <a class="btn" href="projects.html#keyguard">Read about the Keyguard</a>
             </div>
-          </div>
+            <img src="images/keyguard.png" alt="A yellow 3D-printed keyguard fitted over a full-size black keyboard" width="577" height="212">
+          </article>
+          <article class="project-slide">
+            <div>
+              <p class="eyebrow">Project</p>
+              <h3>Tactile Maps</h3>
+              <p class="sub">Adaptabilities</p>
+              <a class="btn" href="projects.html#tactile-maps">Read about Tactile Maps</a>
+            </div>
+            <img src="images/tactile-map-1.webp" alt="A blue and yellow 3D-printed tactile floor map with raised walls and Braille labels" width="900" height="1200" loading="lazy">
+          </article>
+        </div>
+        <div class="btn-row">
+          <a class="btn btn--outline" href="projects.html">View All Projects</a>
         </div>
       </div>
     </section>
@@ -131,9 +98,9 @@
             <p class="lead">ATEC is open to assisting anyone who may need help with designing a custom assistive technology to fit your personal needs!</p>
             <p>After taking on your request, we work closely with you, the user of the assistive technology, to ensure that it not only meets your expectations but is something you want to use.</p>
           </div>
-          <div class="card center">
+          <div class="card">
             <p class="lead">Fill out our project intake form to begin working with ATEC!</p>
-            <div class="btn-row btn-row--center">
+            <div class="btn-row">
               <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfFhZEaENV64fX4PRsF5rQLDq-MLgU04c92JLlNGpVl4EjU7g/viewform?usp=sharing&amp;ouid=114358462147039783282" target="_blank" rel="noopener">Intake Form<span class="visually-hidden"> (opens in new tab)</span></a>
             </div>
           </div>
@@ -170,17 +137,6 @@
     <img class="wave wave--bottom-left" src="images/wave-teal.svg" alt="">
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <a class="footer-logo" href="index.html" aria-label="ATEC home">
-        <img src="images/logo-full.png" alt="ATEC: Assistive Technology Engineering Club" width="749" height="230" loading="lazy">
-      </a>
-      <div class="footer-contact">
-        <p>Email: <a href="mailto:atec.yeg@gmail.com">atec.yeg@gmail.com</a></p>
-        <p>Instagram: <a href="https://www.instagram.com/atec.ualberta/" target="_blank" rel="noopener">@atec.ualberta</a></p>
-      </div>
-      <p class="footer-copy">&copy; 2026 Assistive Technology Engineering Club.</p>
-    </div>
-  </footer>
+  {{> footer}}
 </body>
 </html>

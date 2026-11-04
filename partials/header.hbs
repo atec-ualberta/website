@@ -1,0 +1,19 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="ATEC home">
+      <img src="images/logo.png" alt="ATEC" width="749" height="183">
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="about.html"{{#if (eq current "about")}} aria-current="page"{{/if}}>About</a></li>
+        <li><a href="projects.html"{{#if (eq current "projects")}} aria-current="page"{{/if}}>Projects</a></li>
+        <li><a href="team.html"{{#if (eq current "team")}} aria-current="page"{{/if}}>Team</a></li>
+        <li><a href="contact.html"{{#if (eq current "contact")}} aria-current="page"{{/if}}>Contact</a></li>
+        <li><a href="resources.html"{{#if (eq current "resources")}} aria-current="page"{{/if}}>Resources</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

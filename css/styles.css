@@ -5,8 +5,8 @@
 :root {
   --navy: #47599a;
   --navy-dark: #36457a;
-  --teal: #50b4b9;
-  --teal-dark: #2f8a8f; /* AA-contrast teal for small text on light backgrounds */
+  --teal: #50b4b9; /* decorative only: 2.4:1 on white, too low for text */
+  --teal-dark: #22767b; /* text teal: 5.3:1 on white, 4.7:1 on --panel */
   --yellow: #ffdd00;
   --panel: #eef1f8;
   --panel-yellow: #f6eaae;
@@ -252,10 +252,6 @@ main {
   color: var(--ink);
 }
 
-.center {
-  text-align: center;
-}
-
 .page-title {
   font-size: clamp(2.6rem, 6vw, 4.5rem);
   letter-spacing: -0.02em;
@@ -274,7 +270,7 @@ main {
 }
 
 .teal {
-  color: var(--teal);
+  color: var(--teal-dark);
 }
 
 /* ---------- Buttons -------------------------------------------------------- */
@@ -321,7 +317,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: 28px;
 }
 
@@ -341,8 +337,9 @@ main {
 }
 
 .hero-title {
+  order: -1; /* tagline sits first visually; the logo h1 stays first in reading order */
   margin: 0;
-  text-align: center;
+  text-align: left;
   font-size: clamp(3rem, 6.4vw, 6.5rem);
   font-weight: 700;
   letter-spacing: -0.045em;
@@ -352,7 +349,12 @@ main {
 .hero-logo {
   width: 100%;
   max-width: 620px;
-  justify-self: center;
+  margin: 0;
+  justify-self: start;
+}
+
+.hero-logo img {
+  width: 100%;
 }
 
 /* ---------- Accordion ------------------------------------------------------ */
@@ -486,7 +488,12 @@ main {
   display: none;
 }
 
-/* Home "View Our Projects" slides */
+/* Home "View Our Projects" cards */
+
+.project-list {
+  display: grid;
+  gap: 24px;
+}
 
 .project-slide {
   display: grid;
@@ -526,14 +533,18 @@ main {
   margin-inline: auto;
 }
 
-/* About: Mission / Vision / Values slides */
+/* About: Mission / Vision / Values cards */
+
+.mvv-grid {
+  display: grid;
+  gap: 24px;
+}
 
 .mvv-slide {
   padding: 56px clamp(28px, 8vw, 120px);
   background: var(--navy);
   color: var(--white);
   border-radius: var(--radius);
-  min-height: 380px;
 }
 
 .mvv-slide h3 {
@@ -593,14 +604,6 @@ main {
   font-size: clamp(1.8rem, 3vw, 2.4rem);
 }
 
-.card .btn-row {
-  justify-content: flex-start;
-}
-
-.card .btn-row--center {
-  justify-content: center;
-}
-
 .figure {
   margin: 0;
 }
@@ -613,7 +616,7 @@ main {
 .figure figcaption {
   margin-top: 12px;
   font-size: 1rem;
-  text-align: center;
+  text-align: left;
 }
 
 /* ---------- Projects page -------------------------------------------------- */
@@ -632,7 +635,7 @@ main {
 }
 
 .project-header p {
-  color: var(--teal);
+  color: var(--teal-dark);
   font-size: clamp(1.8rem, 3.4vw, 3.4rem);
   line-height: 1.1;
   letter-spacing: -0.01em;
@@ -640,7 +643,7 @@ main {
 }
 
 .project-body h3 {
-  color: var(--teal);
+  color: var(--teal-dark);
   font-weight: 400;
   font-size: clamp(1.7rem, 2.6vw, 2.25rem);
   margin-top: 1.2em;
@@ -658,12 +661,15 @@ main {
   margin-bottom: 8px;
 }
 
+/* A status badge, not a button: square-ish corners and no border so it
+   doesn't read as clickable next to the pill-shaped .btn */
 .coming-soon {
   display: inline-block;
   margin-top: 8px;
-  padding: 14px 32px;
-  border: 2px dashed var(--navy);
-  border-radius: 999px;
+  padding: 6px 14px;
+  background: var(--panel-yellow);
+  color: var(--ink);
+  border-radius: 6px;
   font-weight: 700;
   font-size: 1.05rem;
 }
@@ -697,8 +703,8 @@ main {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
   padding: 28px 16px 0;
   background: var(--panel);
   border: 1px solid var(--navy);
@@ -708,7 +714,7 @@ main {
 .member h3 {
   margin: 0 0 16px;
   font-weight: 400;
-  color: var(--teal);
+  color: var(--teal-dark);
   font-size: clamp(1.8rem, 2.6vw, 2.6rem);
 }
 
@@ -753,24 +759,29 @@ main {
   display: grid;
   gap: 48px;
   max-width: 460px;
-  margin: 56px auto 0;
+  margin: 56px 0 0;
   padding: 0;
   list-style: none;
   text-align: left;
 }
 
-.contact-list .label {
-  display: flex;
+.contact-list a {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 10px;
   align-items: center;
-  gap: 10px;
+  text-decoration: none;
+}
+
+.contact-list .label {
   font-size: clamp(1.8rem, 3vw, 2.6rem);
   font-weight: 700;
   line-height: 1.1;
 }
 
 .contact-list .value {
-  display: block;
-  margin-left: 40px;
+  grid-column: 2;
+  text-decoration: underline;
   font-size: clamp(1.4rem, 2.4vw, 2.25rem);
 }
 
@@ -889,7 +900,7 @@ main {
   }
 
   .project-slide {
-    text-align: center;
+    text-align: left;
   }
 
   .project-slide img {
@@ -934,8 +945,4 @@ main {
 
 .panel > :last-child {
   margin-bottom: 0;
-}
-
-.contact-list .label[href^="https"] {
-  text-decoration: none;
 }

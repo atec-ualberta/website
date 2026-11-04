@@ -113,7 +113,10 @@
         else d.removeAttribute("aria-current");
       });
       if (announce !== false) {
-        live.textContent = "Slide " + (index + 1) + " of " + slides.length;
+        // announce what the slide shows, not just its position
+        var img = slides[index].querySelector("img");
+        var desc = img && img.alt ? img.alt + ", " : "";
+        live.textContent = desc + "slide " + (index + 1) + " of " + slides.length;
       }
     }
 

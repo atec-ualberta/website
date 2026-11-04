@@ -1,0 +1,19 @@
+{
+  "name": "atec-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "format.fix": "prettier --write .",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "prettier": "^3.5.3",
+    "vite": "^6.2.2",
+    "vite-plugin-handlebars": "^2.0.3"
+  }
+}

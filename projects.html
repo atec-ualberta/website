@@ -1,40 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Projects | ATEC</title>
-  <meta name="description" content="Custom 3D printed assistive technology projects by ATEC, including the Keyguard and Tactile Maps.">
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/main.js" defer></script>
+  {{> head title="Projects | ATEC" description="Custom 3D printed assistive technology projects by ATEC, including the Keyguard and Tactile Maps."}}
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="index.html" aria-label="ATEC home">
-        <img src="images/logo.png" alt="ATEC" width="749" height="183">
-      </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
-        <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
-      </button>
-      <nav class="nav" id="site-nav" aria-label="Main">
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="projects.html" aria-current="page">Projects</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="resources.html">Resources</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  {{> header current="projects"}}
 
   <main id="main" class="page">
     <img class="wave wave--top-right" src="images/wave-teal.svg" alt="">
@@ -47,7 +19,7 @@
           <p>University of Alberta Student Accessibility and Accommodations</p>
         </header>
         <div class="split split--center">
-          <div class="carousel gallery" aria-roledescription="carousel" aria-label="Keyguard photos">
+          <div class="carousel gallery" role="region" aria-roledescription="carousel" aria-label="Keyguard photos">
             <div class="carousel-viewport">
               <div class="carousel-track">
                 <div class="carousel-slide">
@@ -79,7 +51,7 @@
           <p>Adaptabilities</p>
         </header>
         <div class="split split--center">
-          <div class="carousel gallery" aria-roledescription="carousel" aria-label="Tactile map photos">
+          <div class="carousel gallery" role="region" aria-roledescription="carousel" aria-label="Tactile map photos">
             <div class="carousel-viewport">
               <div class="carousel-track">
                 <div class="carousel-slide">
@@ -110,7 +82,7 @@
     </section>
 
     <section class="project" aria-labelledby="more-title">
-      <div class="container--narrow center">
+      <div class="container--narrow">
         <h2 class="section-title" id="more-title">Explore More of Our Projects!</h2>
         <div class="panel">
           <p class="lead">Coming Soon!</p>
@@ -119,17 +91,6 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <a class="footer-logo" href="index.html" aria-label="ATEC home">
-        <img src="images/logo-full.png" alt="ATEC: Assistive Technology Engineering Club" width="749" height="230" loading="lazy">
-      </a>
-      <div class="footer-contact">
-        <p>Email: <a href="mailto:atec.yeg@gmail.com">atec.yeg@gmail.com</a></p>
-        <p>Instagram: <a href="https://www.instagram.com/atec.ualberta/" target="_blank" rel="noopener">@atec.ualberta</a></p>
-      </div>
-      <p class="footer-copy">&copy; 2026 Assistive Technology Engineering Club.</p>
-    </div>
-  </footer>
+  {{> footer}}
 </body>
 </html>
