@@ -36,8 +36,8 @@ body {
   margin: 0;
   font-family: var(--font);
   font-size: 1.25rem;
-  line-height: 1.45;
-  color: var(--navy);
+  line-height: 1.5; /* WCAG 1.4.8 spacing */
+  color: var(--ink);
   background: var(--white);
   overflow-x: hidden;
 }
@@ -55,10 +55,17 @@ h4 {
   margin: 0 0 0.5em;
   line-height: 1.1;
   font-weight: 700;
+  color: var(--navy);
 }
 
 p {
   margin: 0 0 1.1em;
+}
+
+/* Long lines are hard to track back to the start of; WCAG 1.4.8 suggests under 80 characters */
+p,
+li {
+  max-width: 70ch;
 }
 
 a {
@@ -344,6 +351,7 @@ main {
   font-weight: 700;
   letter-spacing: -0.045em;
   line-height: 0.95;
+  color: var(--navy);
 }
 
 .hero-logo {
@@ -375,6 +383,7 @@ main {
 .accordion-heading {
   margin: 0;
   font-size: inherit;
+  color: inherit;
 }
 
 .accordion-trigger {
@@ -513,7 +522,6 @@ main {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--teal-dark);
 }
 
 .project-slide h3 {
@@ -522,7 +530,6 @@ main {
 }
 
 .project-slide .sub {
-  color: var(--teal-dark);
   font-size: 1.35rem;
   margin-bottom: 28px;
 }
@@ -635,7 +642,6 @@ main {
 }
 
 .project-header p {
-  color: var(--teal-dark);
   font-size: clamp(1.8rem, 3.4vw, 3.4rem);
   line-height: 1.1;
   letter-spacing: -0.01em;
@@ -643,7 +649,6 @@ main {
 }
 
 .project-body h3 {
-  color: var(--teal-dark);
   font-weight: 400;
   font-size: clamp(1.7rem, 2.6vw, 2.25rem);
   margin-top: 1.2em;
@@ -714,7 +719,6 @@ main {
 .member h3 {
   margin: 0 0 16px;
   font-weight: 400;
-  color: var(--teal-dark);
   font-size: clamp(1.8rem, 2.6vw, 2.6rem);
 }
 
@@ -738,8 +742,8 @@ main {
 }
 
 .member .avatar-ring {
-  width: 96%;
-  margin: 0 auto -48%;
+  width: 60%;
+  margin: 0 auto -30%;
   aspect-ratio: 1 / 1;
   border: 1px solid var(--navy);
   border-radius: 50%;
@@ -825,7 +829,14 @@ main {
 }
 
 .footer-contact a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   color: var(--white);
+}
+
+.footer-contact svg {
+  flex-shrink: 0;
 }
 
 .footer-copy {

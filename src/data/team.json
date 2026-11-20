@@ -1,0 +1,17 @@
+{
+  "admin": [
+    { "name": "Brian Sanchez", "role": "Co-President", "program": "Mechanical-Biomedical Engineering" },
+    { "name": "Lance Quinto", "role": "Co-President", "program": "Software Engineering" },
+    { "name": "Ethan McGonigle", "role": "Vice President Technical", "program": "Mechanical Engineering" },
+    { "name": "Giuliana Eljuri", "role": "Vice President Communications and Marketing Lead", "program": "Business" },
+    { "name": "Valeria Pinedo", "role": "Vice President Finance", "program": "Business and Accounting" }
+  ],
+  "technical": [
+    { "name": "Ethan McGonigle", "role": "Technical Engineering Lead and Special Projects Lead", "program": "Mechanical Engineering" },
+    { "name": "Daniel Wang", "role": "Technical Engineering Lead", "program": "Mechanical Engineering" }
+  ],
+  "research": [
+    { "name": "Maria Ngan", "role": "Vice President Research", "program": "Mechanical-Biomedical Engineering" },
+    { "name": "Maddy Tiano", "role": "Vice President Outreach", "program": "Mechanical Engineering" }
+  ]
+}
