@@ -22,6 +22,7 @@ src/                 the website itself
   css/styles.css     all styles
   js/main.js         mobile menu, accordions and carousels
   data/team.json     team members shown on the Team page
+  data/links.json    form links, email and Instagram used across the site
   images/            logos, photos and icons
   images/headshots/  team member photos
 vite.config.js       build settings and the list of pages
@@ -38,6 +39,16 @@ The `<head>` tags, site header/navigation and footer are in `src/partials/` and 
 ```
 
 `current` marks which nav link is the current page. To add a new page, copy an existing one, change those values, add a link in `src/partials/header.hbs`, and add the page name to the `pages` list in `vite.config.js`.
+
+## Updating form links, email or Instagram:
+
+The Google Form links, club email and Instagram account are set once in `src/data/links.json` and used everywhere on the site:
+
+- `projectRequestForm`: the project request form ("Project Request Form" buttons)
+- `memberInterestForm`: the member interest form ("Member Interest Form" buttons)
+- `email`, `instagram`, `instagramHandle`: the Contact page and the footer
+
+To swap a form, paste the new link there. Use the plain `.../viewform` link, without the `?usp=...` part Google adds when copying a share link.
 
 ## Updating the team page:
 

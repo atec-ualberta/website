@@ -35,6 +35,7 @@ export default defineConfig({
       // Read on every page render, so edits to team.json show up on refresh
       context: () => ({
         team: JSON.parse(readFileSync(resolve(src, "data/team.json"), "utf8")),
+        links: JSON.parse(readFileSync(resolve(src, "data/links.json"), "utf8")),
       }),
       helpers: {
         eq: (a, b) => a === b,
