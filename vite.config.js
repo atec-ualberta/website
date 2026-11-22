@@ -1,17 +1,21 @@
 import { defineConfig } from "vite";
 import handlebars from "vite-plugin-handlebars";
-import { existsSync, readFileSync } from "fs";
+import { readdirSync, readFileSync } from "fs";
 import { resolve } from "path";
 
 const src = resolve(__dirname, "src");
 const pages = ["index", "about", "projects", "team", "resources", "contact"];
 const headshotTypes = ["png", "jpg", "jpeg", "webp"];
 
-// "Brian Sanchez" -> images/headshots/brian_sanchez.png if that file exists, else the placeholder
+// "Brian Sanchez" -> images/headshots/brian_sanchez.png if that file exists, else the placeholder.
+// Matches ignoring case (Brian_Sanchez.JPG works too): macOS ignores case but the Linux build server doesn't.
 function headshot(name) {
-  const file = name.trim().toLowerCase().split(/\s+/).join("_");
-  const type = headshotTypes.find((ext) => existsSync(resolve(src, "images/headshots", `${file}.${ext}`)));
-  return type ? `images/headshots/${file}.${type}` : "images/avatar-placeholder.png";
+  const wanted = name.trim().toLowerCase().split(/\s+/).join("_");
+  const file = readdirSync(resolve(src, "images/headshots")).find((f) => {
+    const dot = f.lastIndexOf(".");
+    return f.slice(0, dot).toLowerCase() === wanted && headshotTypes.includes(f.slice(dot + 1).toLowerCase());
+  });
+  return file ? `images/headshots/${file}` : "images/avatar-placeholder.png";
 }
 
 // https://vitejs.dev/config/
