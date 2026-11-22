@@ -41,3 +41,5 @@ jobs:
           publish_dir: ./dist
           publish_branch: gh-pages
           nojekyll: true
+          # Writes the CNAME file on every deploy, so the custom domain setting is never wiped
+          cname: atec-ualberta.com
